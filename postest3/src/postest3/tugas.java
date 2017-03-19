@@ -459,6 +459,7 @@ satpamminggu.setVisible(true);
 jempol tampil = new jempol();
 //tugas tugu = new tugas();
         tampil.setVisible(true);
+        this.dispose();
        // tugu.setVisible(false);
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
