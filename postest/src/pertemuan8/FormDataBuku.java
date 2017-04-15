@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pertemuan7;
+package pertemuan8;
 import java.sql.*;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -472,14 +472,15 @@ else if(combo.getSelectedItem().equals("Penulis")){
 //        String harga = txtHarga.getText();
 //        int harga1 = Integer.parseInt(harga);
         int harga = Integer.parseInt(txtHarga.getText()); 
-if(EditData(id, judul, penulis, harga))
-    JOptionPane.showMessageDialog(null,"berhasil ubah data");
-else
-JOptionPane.showConfirmDialog(null, "gagal ubahdata");
-        InitTable();
-        TampilData();
+if(validasiData(judul, penulis))
+    JOptionPane.showMessageDialog(this,"data sudah ada");
+else{
+    EditData(id,judul,penulis,harga);
+    InitTable();
+    TampilData();
 
-    
+JOptionPane.showConfirmDialog(null, "data berhasil diubah");
+} 
     }//GEN-LAST:event_editActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
